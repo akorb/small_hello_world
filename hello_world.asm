@@ -1,11 +1,9 @@
 BITS 32
 
+; System call IDs
 sys_exit    equ     1
 sys_read    equ     3
 sys_write   equ     4
-stdin       equ     0
-stdout      equ     1
-stderr      equ     3
   
             org     0x08048000
   
