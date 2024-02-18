@@ -1,6 +1,8 @@
-all:
-	nasm -f bin -o hello_world hello_world.asm
-	chmod +x hello_world
+.PHONY: clean
+
+hello_world: hello_world.asm
+	nasm -f bin -o $@ $<
+	chmod +x $@
 
 clean:
-	rm hello_world
+	rm -f hello_world
